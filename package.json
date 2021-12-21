@@ -9,7 +9,7 @@
   "scripts": {
     "dev": "ts-node-dev --transpile-only --ignore-watch node_modules src/shared/infra/http/server.ts",
     "test:ut": "jest --testPathIgnorePatterns \"(.*).test.ts\"",
-    "test:it": "jest --testPathIgnorePatterns \"(.*).spec.ts\"",
+    "test:it": "jest --testPathIgnorePatterns \"(.*).spec.ts\" --coverage=false",
     "test": "npm run test:ut && npm run test:it",
     "prepare": "husky install",
     "commit": "git-cz"
