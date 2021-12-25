@@ -7,6 +7,8 @@
   "author": "Jezmael Basilio <jezmaelbasilio@gmail.com>",
   "license": "MIT",
   "scripts": {
+    "start": "node dist/shared/infra/http/server.js",
+    "build": "babel src --extensions \".ts\" --out-dir dist --copy-files",
     "dev": "ts-node-dev --transpile-only --ignore-watch node_modules src/shared/infra/http/server.ts",
     "test:ut": "jest --testPathIgnorePatterns \"(.*).test.ts\"",
     "test:it": "jest --testPathIgnorePatterns \"(.*).spec.ts\" --coverage=false",
