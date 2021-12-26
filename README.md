@@ -5,6 +5,7 @@ NodeJS Start Template
 - Node
 - TypeScript
 - Express
+- Cors
 - Jest (teste de integração e unitário)
 - Eslint
 - Prettier
@@ -12,3 +13,4 @@ NodeJS Start Template
 - Build com Babel
 - Prisma
 - Redis
+- Account Routes + Authenticate with JWT
