@@ -3,10 +3,10 @@ import auth from '@config/auth';
 import { IPayload, ITokenProvider, IVerifyToken } from '../ITokenProvider';
 
 class JwtTokenProvider implements ITokenProvider {
-  public generateToken(id: string): string {
+  public generateToken(publicUserId: string): string {
     const { secret_token, expires_in_token } = auth.jwt;
-    const token = sign({ id }, secret_token, {
-      subject: id,
+    const token = sign({ id: publicUserId }, secret_token, {
+      subject: publicUserId,
       expiresIn: expires_in_token,
       algorithm: 'HS256',
     });
@@ -14,10 +14,10 @@ class JwtTokenProvider implements ITokenProvider {
     return token;
   }
 
-  public generateRefreshToken(id: string, email: string): string {
+  public generateRefreshToken(publicUserId: string, email: string): string {
     const { secret_refresh_token, expires_in_refresh_token } = auth.jwt;
     const token = sign({ email }, secret_refresh_token, {
-      subject: id,
+      subject: publicUserId,
       expiresIn: expires_in_refresh_token,
       algorithm: 'HS256',
     });

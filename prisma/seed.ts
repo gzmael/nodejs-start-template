@@ -1,6 +1,6 @@
 /* eslint-disable no-console */
 import { PrismaClient } from '@prisma/client';
-import { BCryptHashProvider } from '@shared/container/HashProvider/implementations/BCryptHashProvider';
+import { BCryptHashProvider } from '@shared/container/providers/HashProvider/implementations/BCryptHashProvider';
 
 const prisma = new PrismaClient();
 
