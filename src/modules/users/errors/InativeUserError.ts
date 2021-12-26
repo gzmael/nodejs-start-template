@@ -2,7 +2,7 @@ import AppError from '@shared/errors/AppError';
 
 class InativeUserError extends AppError {
   constructor() {
-    super('User still not activated.', 400);
+    super('This user cannot start a session.', 400);
   }
 }
 
